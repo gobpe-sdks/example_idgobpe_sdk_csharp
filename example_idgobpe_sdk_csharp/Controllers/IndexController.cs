@@ -34,8 +34,6 @@ namespace integration_csharp_example.Controllers
                 return Redirect("/");
             }
 
-            System.Net.ServicePointManager.Expect100Continue = false;
-
             IDGobPeClient idGobPeClient = getClient();
             TokenResponse tokenResponse = await idGobPeClient.getTokens(code);
 
